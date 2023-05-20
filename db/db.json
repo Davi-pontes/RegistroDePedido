@@ -1,0 +1,258 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "produto": "banoffe de banana",
+      "preço": "R$12.00"
+    },
+    {
+      "id": 2,
+      "produto": "big copo duplo ninho",
+      "preço": "R$18.00"
+    },
+    {
+      "id": 3,
+      "produto": "big copo ninho + nutella",
+      "preço": "R$18.00"
+    },
+    {
+      "id": 4,
+      "produto": "big copo sensação",
+      "preço": "R$18.00"
+    },
+    {
+      "id": 5,
+      "produto": "bolo bom bom de morango ",
+      "preço": "R$15.00"
+    },
+    {
+      "id": 6,
+      "produto": "bolo pote ninho com nutella",
+      "preço": "R$14.00"
+    },
+    {
+      "id": 7,
+      "produto": "bolo pote red velvet ",
+      "preço": "R$13.00"
+    },
+    {
+      "id": 8,
+      "produto": "bom bom aberto de uva ",
+      "preço": "R$9.00"
+    },
+    {
+      "id": 9,
+      "produto": "copo dois amores",
+      "preço": "R$18.00"
+    },
+    {
+      "id": 10,
+      "produto": "coxinha carne de sol ",
+      "preço": "R$9.50"
+    },
+    {
+      "id": 11,
+      "produto": "coxinha frango catupiry ",
+      "preço": "R$8.00"
+    },
+    {
+      "id": 12,
+      "produto": "delicia de abacaxi ",
+      "preço": "R$12.00"
+    },
+    {
+      "id": 13,
+      "produto": "empadão",
+      "preço": "R$11.00"
+    },
+    {
+      "id": 14,
+      "produto": "fatia brownie",
+      "preço": "R$11.00"
+    },
+    {
+      "id": 15,
+      "produto": "morangonoffe",
+      "preço": "R$12.00"
+    },
+    {
+      "id": 16,
+      "produto": "sanduba brownie bem casado",
+      "preço": "R$8.50"
+    },
+    {
+      "id": 17,
+      "produto": "sanduba brownie ninho",
+      "preço": "R$8.00"
+    },
+    {
+      "id": 18,
+      "produto": "sanduba brownie nutella",
+      "preço": "R$8.50"
+    },
+    {
+      "id": 19,
+      "produto": "torta de limao",
+      "preço": "R$12.00"
+    },
+    {
+      "id": 20,
+      "produto": "trufado de maracuja",
+      "preço": "R$12.00"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "tipo": "solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    }
+  ],
+  "formaDePagamento": [
+    {
+      "id": 1,
+      "forma": "Cartão"
+    },
+    {
+      "id": 2,
+      "forma": "Dinheiro"
+    },
+    {
+      "id": 3,
+      "forma": "Pix"
+    }
+  ],
+  "entrega": [
+    {
+      "id": 1,
+      "Bairro": "Caetes I",
+      "preço": "R$3.00"
+    },
+    {
+      "id": 2,
+      "Bairro": "Caetes II",
+      "preço": "R$2.00"
+    },
+    {
+      "id": 3,
+      "Bairro": "Caetes III",
+      "preço": "R$4.00"
+    },
+    {
+      "id": 4,
+      "Bairro": "Caetes Velho",
+      "preço": "R$4.00"
+    },
+    {
+      "id": 5,
+      "Bairro": "Timbó",
+      "preço": "R$4.00"
+    },
+    {
+      "id": 6,
+      "Bairro": "Abreu centro",
+      "preço": "R$4.00"
+    },
+    {
+      "id": 7,
+      "Bairro": "Fosfato",
+      "preço": "R$5.00"
+    },
+    {
+      "id": 8,
+      "Bairro": "Cruz de Rebouças",
+      "preço": "R$6.00"
+    },
+    {
+      "id": 9,
+      "Bairro": "Igarassu",
+      "preço": "R$10.00"
+    },
+    {
+      "id": 10,
+      "Bairro": "Arthur Lundreg II",
+      "preço": "R$6.00"
+    },
+    {
+      "id": 11,
+      "Bairro": "Paratibe",
+      "preço": "R$6.00"
+    },
+    {
+      "id": 12,
+      "Bairro": "Matinha",
+      "preço": "R$5.00"
+    },
+    {
+      "id": 13,
+      "Bairro": "Paulista centro",
+      "preço": "R$8.00"
+    },
+    {
+      "id": 14,
+      "Bairro": "Arthur Lundreg I",
+      "preço": "R$8.00"
+    },
+    {
+      "id": 15,
+      "Bairro": "Maranguape",
+      "preço": "R$10.00"
+    },
+    {
+      "id": 16,
+      "Bairro": "Torres galvão",
+      "preço": "R$10.00"
+    },
+    {
+      "id": 17,
+      "Bairro": "Planalto",
+      "preço": "R$4.00"
+    },
+    {
+      "id": 18,
+      "Bairro": "Desterro",
+      "preço": "R$5.00"
+    }
+  ],
+  "pedido": [
+    {
+      "nome": "Davi Jose",
+      "produto": [
+        "bolo bom bom de morango ",
+        "bom bom aberto de uva "
+      ],
+      "preco": "R$9.00",
+      "pagamento": "Dinheiro",
+      "cidade": "Caetes Velho",
+      "taxa": "R$4.00",
+      "total": 13,
+      "telefone": "81985199653",
+      "endereco": "Rua Dez, 16",
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Davi Jose",
+      "produto": [
+        "coxinha frango catupiry ",
+        "big copo duplo ninho"
+      ],
+      "preco": "R$18.00",
+      "pagamento": "Dinheiro",
+      "cidade": "Abreu centro",
+      "taxa": "R$4.00",
+      "total": 22,
+      "telefone": "81985199653",
+      "endereco": "Rua Dez, 16",
+      "status": "Solicitado",
+      "id": 2
+    }
+  ]
+}
