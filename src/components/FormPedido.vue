@@ -96,6 +96,7 @@ export default {
       nome: null,
       produto: null,
       produtosSelecionados: [],
+      preco: [],
       forpagamento: null,
       cidadebairro: null,
       telefone: null,
@@ -128,19 +129,27 @@ export default {
     },
     async enviarPedido(e) {
       e.preventDefault();
-      const precoProduto = parseFloat(this.produto.preço.replace("R$", ""));
-      const precoCidadeBairro = parseFloat(
-      this.cidadebairro.preço.replace("R$", "")
-      );
+      
+      const precoCidadeBairro = parseFloat(this.cidadebairro.preço.replace("R$", ""));
+
+      const somaReduce = this.preco.reduce((total, numero) => {
+      const numeroLimpo = parseFloat(numero.replace("R$", ""));
+      return total + numeroLimpo;
+      }, 0);
+
+      const totalPedido = "R$" + (somaReduce + precoCidadeBairro)
+
+      const produtosFormatados = this.produtosSelecionados.join("\n").replace(/"/g, "");
+      const precosFormatados = this.preco.join("\n").replace(/"/g, "");
 
       const data = {
         nome: this.nome,
-        produto: this.produtosSelecionados,
-        preco: this.produto.preço,
+        produto: produtosFormatados,
+        preco: precosFormatados,
         pagamento: this.forpagamento,
         cidade: this.cidadebairro.Bairro,
         taxa: this.cidadebairro.preço,
-        total: precoProduto + precoCidadeBairro,
+        total: totalPedido,
         telefone: this.telefone,
         endereco: this.endereco,
         status: "Solicitado",
@@ -171,7 +180,11 @@ export default {
     async adicionaProduto() {
       if (this.produto) {
         this.produtosSelecionados.push(this.produto.produto);
-        console.log(this.produtosSelecionados);
+        this.preco.push(this.produto.preço)
+
+        this.msg = `Produto adicionado com sucesso!`
+
+        setTimeout(() => (this.msg = ""), 1000)
       }
     },
   },

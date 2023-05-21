@@ -224,35 +224,29 @@
   "pedido": [
     {
       "nome": "Davi Jose",
-      "produto": [
-        "bolo bom bom de morango ",
-        "bom bom aberto de uva "
-      ],
-      "preco": "R$9.00",
+      "produto": "empadão\nsanduba brownie ninho\ntorta de limao",
+      "preco": "R$11.00\nR$8.00\nR$12.00",
       "pagamento": "Dinheiro",
-      "cidade": "Caetes Velho",
-      "taxa": "R$4.00",
-      "total": 13,
-      "telefone": "81985199653",
-      "endereco": "Rua Dez, 16",
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "Davi Jose",
-      "produto": [
-        "coxinha frango catupiry ",
-        "big copo duplo ninho"
-      ],
-      "preco": "R$18.00",
-      "pagamento": "Dinheiro",
-      "cidade": "Abreu centro",
-      "taxa": "R$4.00",
-      "total": 22,
+      "cidade": "Arthur Lundreg I",
+      "taxa": "R$8.00",
+      "total": "R$39",
       "telefone": "81985199653",
       "endereco": "Rua Dez, 16",
       "status": "Solicitado",
       "id": 2
+    },
+    {
+      "nome": "jhenifer souza alves de lima",
+      "produto": "coxinha frango catupiry \nsanduba brownie bem casado\ntorta de limao",
+      "preco": "R$8.00\nR$8.50\nR$12.00",
+      "pagamento": "Cartão",
+      "cidade": "Torres galvão",
+      "taxa": "R$10.00",
+      "total": "R$38.5",
+      "telefone": "81985199653",
+      "endereco": "Rua Doze",
+      "status": "Solicitado",
+      "id": 3
     }
   ]
 }

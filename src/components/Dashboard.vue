@@ -3,16 +3,16 @@
         <Message :msg="msg" v-show="msg"/>
         <div>
             <div id="pedido-table-heading">
-                <div class="order-id">#:</div>
+                <div class="order-id" id="id">#:</div>
                 <div>Cliente:</div>
-                <div>Produto:</div>
-                <div>Preço:</div>
-                <div>Forma de pagamento:</div>
-                <div>Cidade/Birro:</div>
-                <div>Taxa:</div>
-                <div>Total:</div>
                 <div>Telefone:</div>
+                <div>Cidade/Birro:</div>
                 <div>Endereço:</div>
+                <div>Taxa:</div>
+                <div>Forma de pagamento:</div>
+                <div>Total:</div>
+                <div>Preço:</div>
+                <div>Produto:</div>
                 <div>Ações:</div>
             </div>
         </div>
@@ -20,14 +20,14 @@
             <div class="pedido-table-row" v-for="pedido in pedidos" :key="pedido.id">
                 <div class="order-number">{{ pedido.id}}</div>
                 <div>{{ pedido.nome}}</div>
-                <div>{{pedido.produto}}</div>
-                <div>{{pedido.preco}}</div>
-                <div>{{pedido.pagamento}}</div>
-                <div>{{pedido.cidade}}</div>
-                <div>{{pedido.taxa}}</div>
-                <div>{{pedido.total}}</div>
                 <div>{{pedido.telefone}}</div>
+                <div>{{pedido.cidade}}</div>
                 <div>{{pedido.endereco}}</div>
+                <div>{{pedido.taxa}}</div>
+                <div>{{pedido.pagamento}}</div>
+                <div>{{pedido.total}}</div>
+                <div>{{pedido.preco}}</div>
+                <div>{{pedido.produto}}</div>
                 <button class="delete-btn" @click="deletePedido(pedido.id)">Cancelar</button>
             </div>
         </div>
