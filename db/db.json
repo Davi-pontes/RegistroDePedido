@@ -114,6 +114,16 @@
       "id": 23,
       "produto": "pudim",
       "preço": "R$8.50"
+    },
+    {
+      "id": 24,
+      "produto": "Pão de frongo com catupiry",
+      "preço": "R$10.00"
+    },
+    {
+      "id": 25,
+      "produto": "Pão pizza",
+      "preço": "R$9.50"
     }
   ],
   "status": [
