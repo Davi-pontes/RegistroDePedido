@@ -8,7 +8,6 @@
                 <div>Telefone:</div>
                 <div>Cidade/Birro:</div>
                 <div>Endereço:</div>
-                <div>Taxa:</div>
                 <div>Forma de pagamento:</div>
                 <div>Total:</div>
                 <div>Preço:</div>
@@ -23,7 +22,6 @@
                 <div>{{pedido.telefone}}</div>
                 <div>{{pedido.cidade}}</div>
                 <div>{{pedido.endereco}}</div>
-                <div>{{pedido.taxa}}</div>
                 <div>{{pedido.pagamento}}</div>
                 <div>{{pedido.total}}</div>
                 <div>{{pedido.preco}}</div>
@@ -120,6 +118,7 @@ select {
 }
 
 .delete-btn{
+    height: 40px;
     background-color: #FAC1D9;
     color: #8D6271;
     font-weight: bold;

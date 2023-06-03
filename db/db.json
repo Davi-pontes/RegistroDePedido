@@ -2,23 +2,23 @@
   "produtos": [
     {
       "id": 1,
-      "produto": "banoffe de banana",
+      "produto": "duplo ninho geleia de morango",
       "preço": "R$12.00"
     },
     {
       "id": 2,
-      "produto": "big copo duplo ninho",
-      "preço": "R$18.00"
+      "produto": "big copo duplo ninho morango",
+      "preço": "R$19.00"
     },
     {
       "id": 3,
       "produto": "big copo ninho + nutella",
-      "preço": "R$18.00"
+      "preço": "R$19.00"
     },
     {
       "id": 4,
-      "produto": "big copo sensação",
-      "preço": "R$18.00"
+      "produto": "big copo ferreiro",
+      "preço": "R$19.00"
     },
     {
       "id": 5,
@@ -37,8 +37,8 @@
     },
     {
       "id": 8,
-      "produto": "bom bom aberto de uva ",
-      "preço": "R$9.00"
+      "produto": "bolo vulcão ",
+      "preço": "R$29.00"
     },
     {
       "id": 9,
@@ -63,32 +63,32 @@
     {
       "id": 13,
       "produto": "empadão",
-      "preço": "R$11.00"
+      "preço": "R$12.00"
     },
     {
       "id": 14,
-      "produto": "fatia brownie",
-      "preço": "R$11.00"
+      "produto": "fatia brownie morango",
+      "preço": "R$12.00"
     },
     {
       "id": 15,
-      "produto": "morangonoffe",
-      "preço": "R$12.00"
+      "produto": "fatia brownie ninho+nutella",
+      "preço": "R$12.50"
     },
     {
       "id": 16,
       "produto": "sanduba brownie bem casado",
-      "preço": "R$8.50"
+      "preço": "R$9.00"
     },
     {
       "id": 17,
       "produto": "sanduba brownie ninho",
-      "preço": "R$8.00"
+      "preço": "R$9.00"
     },
     {
       "id": 18,
       "produto": "sanduba brownie nutella",
-      "preço": "R$8.50"
+      "preço": "R$9.00"
     },
     {
       "id": 19,
@@ -99,6 +99,21 @@
       "id": 20,
       "produto": "trufado de maracuja",
       "preço": "R$12.00"
+    },
+    {
+      "id": 21,
+      "produto": "bolo pote chocolatudo",
+      "preço": "R$14.00"
+    },
+    {
+      "id": 22,
+      "produto": "bolo pote prestigio",
+      "preço": "R$13.00"
+    },
+    {
+      "id": 23,
+      "produto": "pudim",
+      "preço": "R$8.50"
     }
   ],
   "status": [
@@ -223,30 +238,160 @@
   ],
   "pedido": [
     {
-      "nome": "Davi Jose",
-      "produto": "empadão\nsanduba brownie ninho\ntorta de limao",
-      "preco": "R$11.00\nR$8.00\nR$12.00",
+      "nome": "manu",
+      "produto": "big copo ninho + nutella\nduplo ninho geleia de morango",
+      "preco": "R$19.00\nR$12.00",
       "pagamento": "Dinheiro",
-      "cidade": "Arthur Lundreg I",
-      "taxa": "R$8.00",
-      "total": "R$39",
-      "telefone": "81985199653",
-      "endereco": "Rua Dez, 16",
+      "cidade": "Torres galvão",
+      "taxa": "R$10.00",
+      "total": "R$41",
+      "telefone": "996715911",
+      "endereco": "rua pedro americo,86. na rua da quadra do anita ",
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Kaline",
+      "produto": "fatia brownie ninho+nutella\nbolo pote red velvet \nbolo pote ninho com nutella\ntrufado de maracuja",
+      "preco": "R$12.50\nR$13.00\nR$14.00\nR$12.00",
+      "pagamento": "Pix",
+      "cidade": "Planalto",
+      "taxa": "R$4.00",
+      "total": "R$55.5",
+      "telefone": "81996186707",
+      "endereco": "Rua sete de setembro n 15, proximo a borracharia de paulinho",
       "status": "Solicitado",
       "id": 2
     },
     {
-      "nome": "jhenifer souza alves de lima",
-      "produto": "coxinha frango catupiry \nsanduba brownie bem casado\ntorta de limao",
-      "preco": "R$8.00\nR$8.50\nR$12.00",
-      "pagamento": "Cartão",
-      "cidade": "Torres galvão",
-      "taxa": "R$10.00",
-      "total": "R$38.5",
-      "telefone": "81985199653",
-      "endereco": "Rua Doze",
+      "nome": "Prin",
+      "produto": "bolo pote red velvet ",
+      "preco": "R$13.00",
+      "pagamento": "Dinheiro",
+      "cidade": "Abreu centro",
+      "taxa": "R$4.00",
+      "total": "R$17",
+      "telefone": null,
+      "endereco": "Rua alto são miguel ",
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "nome": "fabiola ",
+      "produto": "copo dois amores",
+      "preco": "R$18.00",
+      "pagamento": "Pix",
+      "cidade": "Caetes III",
+      "taxa": "R$4.00",
+      "total": "R$22",
+      "telefone": "981141673",
+      "endereco": "rua 77, n6",
+      "status": "Solicitado",
+      "id": 4
+    },
+    {
+      "nome": "jacke",
+      "produto": "copo dois amores",
+      "preco": "R$18.00",
+      "pagamento": "Pix",
+      "cidade": "Matinha",
+      "taxa": "R$5.00",
+      "total": "R$23",
+      "telefone": "994577073",
+      "endereco": "residedencial josefa do carmo , bloco 4 ap 108",
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "nome": "Iara",
+      "produto": "bolo pote ninho com nutella\nbig copo ninho + nutella",
+      "preco": "R$14.00\nR$19.00",
+      "pagamento": "Cartão",
+      "cidade": "Caetes III",
+      "taxa": "R$4.00",
+      "total": "R$37",
+      "telefone": "9986843859",
+      "endereco": "Rua 74, N°36",
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "nome": "camilly",
+      "produto": "bolo pote prestigio\npudim\nbolo pote red velvet ",
+      "preco": "R$13.00\nR$8.50\nR$13.00",
+      "pagamento": "Cartão",
+      "cidade": "Caetes Velho",
+      "taxa": "R$4.00",
+      "total": "R$38.5",
+      "telefone": "9979029114",
+      "endereco": "ruA SÃO joão, 1826 ",
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "nome": "Lua ",
+      "produto": "duplo ninho geleia de morango\nfatia brownie morango",
+      "preco": "R$12.00\nR$12.00",
+      "pagamento": "Pix",
+      "cidade": "Caetes Velho",
+      "taxa": "R$4.00",
+      "total": "R$28",
+      "telefone": "994981892",
+      "endereco": "rua da vitoria",
+      "status": "Solicitado",
+      "id": 8
+    },
+    {
+      "nome": "Brunna",
+      "produto": "bolo pote ninho com nutella",
+      "preco": "R$14.00",
+      "pagamento": "Pix",
+      "cidade": "Abreu centro",
+      "taxa": "R$4.00",
+      "total": "R$18",
+      "telefone": "997305049",
+      "endereco": "rua jacaranda, n 91, alto são Miguel",
+      "status": "Solicitado",
+      "id": 9
+    },
+    {
+      "nome": "Mila",
+      "produto": "bolo bom bom de morango \nbolo pote red velvet \nbolo pote chocolatudo\ntrufado de maracuja",
+      "preco": "R$15.00\nR$13.00\nR$14.00\nR$12.00",
+      "pagamento": "Cartão",
+      "cidade": "Caetes II",
+      "taxa": "R$2.00",
+      "total": "R$56",
+      "telefone": "986051826",
+      "endereco": "rua 3 66",
+      "status": "Solicitado",
+      "id": 10
+    },
+    {
+      "nome": "Debora",
+      "produto": "duplo ninho geleia de morango\ncoxinha frango catupiry \nsanduba brownie ninho\nfatia brownie morango",
+      "preco": "R$12.00\nR$8.00\nR$9.00\nR$12.00",
+      "pagamento": "Pix",
+      "cidade": "Paulista centro",
+      "taxa": "R$8.00",
+      "total": "R$49",
+      "telefone": "993156185",
+      "endereco": "rua via local b, 67 / bloco C, ap 109",
+      "status": "Solicitado",
+      "id": 11
+    },
+    {
+      "nome": "Ana maria",
+      "produto": "bolo pote ninho com nutella\nbolo pote chocolatudo",
+      "preco": "R$14.00\nR$14.00",
+      "pagamento": "Cartão",
+      "cidade": "Matinha",
+      "taxa": "R$5.00",
+      "total": "R$33",
+      "telefone": "984014807",
+      "endereco": "rua Dom Pedro 1, n 1005, Matinha",
+      "status": "Solicitado",
+      "id": 12
     }
   ]
 }

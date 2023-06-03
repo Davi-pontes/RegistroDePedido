@@ -1,4 +1,12 @@
 <template >
+<div class="Total-atualizado">
+  <p>
+    R$
+  {{totalPed}}
+  </p>
+
+
+</div>
   <div id="topo">
     <Message :msg="msg" v-show="msg" />
     <div>
@@ -80,6 +88,7 @@
       </form>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -102,6 +111,7 @@ export default {
       telefone: null,
       endereco: null,
       msg: null,
+      totalPed: 0
     };
   },
   methods: {
@@ -182,11 +192,27 @@ export default {
         this.produtosSelecionados.push(this.produto.produto);
         this.preco.push(this.produto.preço)
 
+        this.totalPed = this.preco.reduce((total, numero) => {
+        const numeroLimpo = parseFloat(numero.replace("R$", ""));
+        return total + numeroLimpo;
+        }, 0);
+
         this.msg = `Produto adicionado com sucesso!`
 
         setTimeout(() => (this.msg = ""), 1000)
+        this.atualizarTotal()
       }
     },
+    async atualizarTotal() {
+      console.log(this.produto.preço)
+      let array = []
+      let teste = parseFloat(this.produto.preço.replace("R$", ""))
+      array.push(teste)
+      array.reduce((total, number) => {
+        this.totalPed = total + number
+      })
+
+    }
   },
   mounted() {
     this.getProdutos();
@@ -238,5 +264,19 @@ select {
 .submit-btn:hover {
   background-color: transparent;
   color: #222;
+}
+.total {
+  width: 40px;
+  height: 70px;
+  border: 2px solid #8d6271;
+  z-index: 9999;
+  float: left;
+}
+.Total-atualizado{
+  width: 120px;
+  height: 60px;
+  border: 2px solid black;
+  float: right;
+
 }
 </style>
