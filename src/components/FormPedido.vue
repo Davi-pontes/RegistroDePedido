@@ -1,6 +1,6 @@
 <template >
 <div class="Total-atualizado">
-  <p>
+  <p class="total-text">
     R$
   {{totalPed}}
   </p>
@@ -55,8 +55,9 @@
             name="cidade-bairro"
             id="cidade-bairro"
             v-model="cidadebairro"
+            @change="adicionarTaxaAoTotal()"
           >
-            <option value="">Cidade/Bairro</option>
+            <option >Cidade/Bairro</option>
             <option v-for="cidade in entrega" :key="cidade.id" :value="cidade">
               {{ cidade.Bairro }}
             </option>
@@ -95,6 +96,7 @@
 import Message from "./Message.vue";
 
 export default {
+ 
   name: "FormPedido",
   data() {
     return {
@@ -111,7 +113,9 @@ export default {
       telefone: null,
       endereco: null,
       msg: null,
-      totalPed: 0
+      totalPed: 0,
+      cidadeSelecionada: null,
+      arrayTotal: []
     };
   },
   methods: {
@@ -178,12 +182,13 @@ export default {
 
       setTimeout(() => (this.msg = ""), 3000);
 
-      this.nome = "";
-      this.produto = "";
-      this.forpagamento = "";
-      this.cidadebairro = "";
-      this.telefone = "";
-      this.endereco = "";
+      this.nome = ""
+      this.produto = ""
+      this.forpagamento = ""
+      this.cidadebairro = ""
+      this.telefone = ""
+      this.endereco = ""
+      this.totalPed = ""
 
       document.getElementById("topo").scrollIntoView({ behavior: "smooth" });
     },
@@ -204,13 +209,15 @@ export default {
       }
     },
     async atualizarTotal() {
-      console.log(this.produto.preço)
-      let array = []
-      let teste = parseFloat(this.produto.preço.replace("R$", ""))
-      array.push(teste)
-      array.reduce((total, number) => {
-        this.totalPed = total + number
-      })
+        let teste = parseFloat(this.produto.preço.replace("R$", ""))
+        this.arrayTotal.push(teste)
+        this.totalPed = this.arrayTotal.reduce((total, number) => {
+          return total + number
+        }, 0)
+    },
+    async adicionarTaxaAoTotal(){
+      let tirarCifrao = parseFloat(this.cidadebairro.preço.replace("R$", ""))
+      this.totalPed = this.totalPed + tirarCifrao
 
     }
   },
@@ -277,6 +284,12 @@ select {
   height: 60px;
   border: 2px solid black;
   float: right;
+}
+.total-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 
 }
 </style>

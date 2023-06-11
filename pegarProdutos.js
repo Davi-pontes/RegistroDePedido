@@ -32,11 +32,11 @@ async function getProdutos() {
     console.log(produtosFormatados);
   
     // Adicionar dados à planilha
-    var workbook = XLSX.utils.book_new();
-    var worksheet = XLSX.utils.json_to_sheet(data);
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
-    XLSX.writeFile(workbook, 'BDjheniferdoce.xlsx');
-    console.log('Produtos adicionados com sucesso!')
+    // var workbook = XLSX.utils.book_new();
+    // var worksheet = XLSX.utils.json_to_sheet(data);
+    // XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+    // XLSX.writeFile(workbook, 'BDjheniferdoce.xlsx');
+    // console.log('Produtos adicionados com sucesso!')
   }
 
   app.listen('3000', () => {
