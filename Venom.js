@@ -1,9 +1,13 @@
 const venom = require('venom-bot')
-let client = null
+const express = require('express')
+const app = express()
+
+// app.listen(3002, () => {
+//   console.log('Servidor venom rodando na porta 3002')
+// })
 
 exports.Connect = async () =>{
-
-  if(!client){
+ 
     try {
       client = await venom.create({
         session: 'Jhenifer doce' 
@@ -15,9 +19,5 @@ exports.Connect = async () =>{
       console.log(error);
       throw error 
     }
-  }
-  else {
-    return client
-  }
 
 }

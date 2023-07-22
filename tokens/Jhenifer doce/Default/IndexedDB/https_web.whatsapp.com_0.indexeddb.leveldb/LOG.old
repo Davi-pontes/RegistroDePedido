@@ -1,3 +1,36 @@
-2023/07/19-20:15:05.161 2424 Reusing MANIFEST C:\Users\davip\OneDrive\Documentos\doceriajhenifersouza\tokens\Jhenifer doce\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/07/19-20:15:05.163 2424 Recovering log #760
-2023/07/19-20:15:05.308 2424 Reusing old log C:\Users\davip\OneDrive\Documentos\doceriajhenifersouza\tokens\Jhenifer doce\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000760.log 
+2023/07/22-15:24:22.563 2b84 Reusing MANIFEST C:\Users\davip\OneDrive\Documentos\doceriajhenifersouza\tokens\Jhenifer doce\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/22-15:24:22.566 2b84 Recovering log #1608
+2023/07/22-15:24:22.710 2b84 Reusing old log C:\Users\davip\OneDrive\Documentos\doceriajhenifersouza\tokens\Jhenifer doce\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001608.log 
+2023/07/22-15:25:05.378 38b8 Level-0 table #1629: started
+2023/07/22-15:25:05.524 38b8 Level-0 table #1629: 1108671 bytes OK
+2023/07/22-15:25:05.528 38b8 Delete type=0 #1608
+2023/07/22-15:25:05.530 38b8 Compacting 1@0 + 0@1 files
+2023/07/22-15:25:05.639 38b8 Generated table #1630@0: 21460 keys, 245658 bytes
+2023/07/22-15:25:05.682 38b8 Generated table #1631@0: 15304 keys, 376572 bytes
+2023/07/22-15:25:05.682 38b8 Compacted 1@0 + 0@1 files => 622230 bytes
+2023/07/22-15:25:05.683 38b8 compacted to: files[ 0 2 27 0 0 0 0 ]
+2023/07/22-15:25:05.684 38b8 Delete type=2 #1629
+2023/07/22-15:25:06.680 2194 Compacting 1@1 + 10@2 files
+2023/07/22-15:25:07.309 2194 Generated table #1632@1: 2703 keys, 2145517 bytes
+2023/07/22-15:25:07.719 2194 Generated table #1633@1: 35163 keys, 2193101 bytes
+2023/07/22-15:25:08.584 2194 Generated table #1634@1: 35675 keys, 2265296 bytes
+2023/07/22-15:25:08.912 2194 Generated table #1635@1: 35216 keys, 2261252 bytes
+2023/07/22-15:25:09.278 2194 Generated table #1636@1: 36014 keys, 2253129 bytes
+2023/07/22-15:25:09.585 2194 Generated table #1637@1: 47308 keys, 2212991 bytes
+2023/07/22-15:25:09.755 2194 Generated table #1638@1: 53725 keys, 2192208 bytes
+2023/07/22-15:25:10.098 2194 Generated table #1639@1: 94443 keys, 2243346 bytes
+2023/07/22-15:25:10.501 2194 Generated table #1640@1: 93298 keys, 2241403 bytes
+2023/07/22-15:25:10.656 2194 Generated table #1641@1: 20068 keys, 485639 bytes
+2023/07/22-15:25:10.656 2194 Compacted 1@1 + 10@2 files => 20493882 bytes
+2023/07/22-15:25:10.658 2194 compacted to: files[ 0 1 27 0 0 0 0 ]
+2023/07/22-15:25:10.659 2194 Delete type=2 #1612
+2023/07/22-15:25:10.659 2194 Delete type=2 #1613
+2023/07/22-15:25:10.659 2194 Delete type=2 #1614
+2023/07/22-15:25:10.659 2194 Delete type=2 #1615
+2023/07/22-15:25:10.659 2194 Delete type=2 #1616
+2023/07/22-15:25:10.659 2194 Delete type=2 #1617
+2023/07/22-15:25:10.659 2194 Delete type=2 #1618
+2023/07/22-15:25:10.659 2194 Delete type=2 #1619
+2023/07/22-15:25:10.659 2194 Delete type=2 #1620
+2023/07/22-15:25:10.659 2194 Delete type=2 #1621
+2023/07/22-15:25:10.660 2194 Delete type=2 #1631
