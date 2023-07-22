@@ -122,6 +122,11 @@
     },
     {
       "id": 25,
+      "produto": "Torta holandesa",
+      "preço": "R$17.50"
+    },
+    {
+      "id": 25,
       "produto": "Pão pizza",
       "preço": "R$9.50"
     }
@@ -248,82 +253,139 @@
   ],
   "pedido": [
     {
-      "nome": "Gabriel Caetes",
-      "produto": "big copo ninho + nutella\nsanduba brownie ninho\ntrufado de maracuja\nempadão",
-      "preco": "R$19.00\nR$9.00\nR$12.00\nR$12.00",
-      "pagamento": "Pix",
-      "cidade": "Caetes I",
-      "taxa": "R$3.00",
-      "total": "R$55",
-      "telefone": "996187067",
-      "endereco": "Rua 107 N°15",
+      "nome": "Prin",
+      "produto": "Torta holandesa\nfatia brownie morango",
+      "preco": "R$17.50\nR$12.00",
+      "pagamento": "Cartão",
+      "cidade": "Fosfato",
+      "taxa": "R$5.00",
+      "total": "R$34.5",
+      "telefone": null,
+      "endereco": null,
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "Adla",
-      "produto": "bolo pote red velvet \ntrufado de maracuja",
-      "preco": "R$13.00\nR$12.00",
+      "nome": "Kelly",
+      "produto": "bolo pote chocolatudo",
+      "preco": "R$14.00",
       "pagamento": "Pix",
-      "cidade": "Planalto",
-      "taxa": "R$4.00",
-      "total": "R$29",
-      "telefone": "996251218",
-      "endereco": "6 Travessa Eucalipto N°220",
+      "cidade": "Caetes II",
+      "taxa": "R$2.00",
+      "total": "R$16",
+      "telefone": "81985097696",
+      "endereco": "Rua Dez n°16",
       "status": "Solicitado",
       "id": 2
     },
     {
-      "nome": "Chelly",
-      "produto": "empadão\nempadão",
-      "preco": "R$12.00\nR$12.00",
-      "pagamento": "Dinheiro",
-      "cidade": "Matinha",
-      "taxa": "R$5.00",
-      "total": "R$29",
-      "telefone": "986899031",
-      "endereco": "Apartamento Dom Helder Bloco 7 apartamento 305",
+      "nome": "Taila",
+      "produto": "pudim\npudim\nbig copo ninho + nutella",
+      "preco": "R$8.50\nR$8.50\nR$19.00",
+      "pagamento": "Pix",
+      "cidade": "Abreu centro",
+      "taxa": "R$4.00",
+      "total": "R$40",
+      "telefone": "81 97335-4763",
+      "endereco": "Rua do cajueiro numero 64 Alto bela vista",
       "status": "Solicitado",
       "id": 3
     },
     {
-      "nome": "Jaqueline",
-      "produto": "bolo pote red velvet \ntrufado de maracuja\nsanduba brownie ninho",
-      "preco": "R$13.00\nR$12.00\nR$9.00",
-      "pagamento": "Dinheiro",
-      "cidade": "Planalto",
+      "nome": "Bruna ",
+      "produto": "Torta holandesa\ncoxinha frango catupiry \ncoxinha frango catupiry ",
+      "preco": "R$17.50\nR$8.00\nR$8.00",
+      "pagamento": "Pix",
+      "cidade": "Abreu centro",
       "taxa": "R$4.00",
-      "total": "R$38",
-      "telefone": "988693056",
-      "endereco": "loteamento novo horizonte ",
+      "total": "R$37.5",
+      "telefone": "81 98603-3864",
+      "endereco": "Primeira travessa padre machado n° 508 B  Ao lado do hotelsinho",
       "status": "Solicitado",
       "id": 4
     },
     {
-      "nome": "junior ",
-      "produto": "trufado de maracuja\nbig copo ninho + nutella",
-      "preco": "R$12.00\nR$19.00",
-      "pagamento": "Dinheiro",
-      "cidade": "Caetes III",
-      "taxa": "R$4.00",
-      "total": "R$35",
-      "telefone": "994732919",
-      "endereco": "rua joão cordeiro de moura, n 33 (por trás do cemitério, procurar juca da cacimba)",
+      "nome": "Suzana",
+      "produto": "pudim\nempadão",
+      "preco": "R$8.50\nR$12.00",
+      "pagamento": "Pix",
+      "cidade": "Matinha",
+      "taxa": "R$5.00",
+      "total": "R$25.5",
+      "telefone": "81 98270-6069",
+      "endereco": "Residencial Antônio Alexandre Bloco 8  Apartamento 03",
       "status": "Solicitado",
       "id": 5
     },
     {
-      "nome": "Luana ",
-      "produto": "bolo pote chocolatudo",
-      "preco": "R$14.00",
+      "nome": "Thaiza",
+      "produto": "duplo ninho geleia de morango\nempadão\nfatia brownie morango\nbolo pote red velvet \nbolo pote red velvet ",
+      "preco": "R$12.00\nR$12.00\nR$12.00\nR$13.00\nR$13.00",
       "pagamento": "Pix",
-      "cidade": "Desterro",
-      "taxa": "R$5.00",
-      "total": "R$19",
-      "telefone": "994478163",
-      "endereco": "rua dr walter beliam n 87, casa do portão branco",
+      "cidade": "Planalto",
+      "taxa": "R$4.00",
+      "total": "R$66",
+      "telefone": "81 98401-6287",
+      "endereco": "rua rio branco número 147a, próximo a casa de seu vava",
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "nome": "Teste",
+      "produto": "big copo duplo ninho morango\ncopo dois amores\nfatia brownie morango",
+      "preco": "R$19.00\nR$18.00\nR$12.00",
+      "pagamento": "Pix",
+      "cidade": "Caetes III",
+      "taxa": "R$4.00",
+      "total": "R$53",
+      "telefone": "555888777444",
+      "endereco": "Rua 10",
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "{\"nome\":\"Teste\",\"produto\":\"big copo ferreiro\\nbolo vulcão \\nempadão\",\"preco\":\"R$19.00\\nR$29.00\\nR$12.00\",\"pagamento\":\"Dinheiro\",\"cidade\":\"Abreu centro\",\"taxa\":\"R$4.00\",\"total\":\"R$64\",\"telefone\":\" 5581987718304\",\"endereco\":\"Rua 10\",\"status\":\"Solicitado\"}": "",
+      "id": 8
+    },
+    {
+      "{\"nome\":\"Teste\",\"produto\":\"bolo pote red velvet \\ncopo dois amores\",\"preco\":\"R$13.00\\nR$18.00\",\"pagamento\":\"Cartão\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$35\",\"telefone\":\"81985199653\",\"endereco\":\"Rua Doze\",\"status\":\"Solicitado\"}": "",
+      "id": 9
+    },
+    {
+      "{\"nome\":\"Teste\",\"produto\":\"bolo pote red velvet \\ncopo dois amores\",\"preco\":\"R$13.00\\nR$18.00\",\"pagamento\":\"Cartão\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$35\",\"telefone\":\"81985199653\",\"endereco\":\"Rua Doze\",\"status\":\"Solicitado\"}": "",
+      "id": 10
+    },
+    {
+      "{\"nome\":\"Teste\",\"produto\":\"bolo pote red velvet \\ncopo dois amores\",\"preco\":\"R$13.00\\nR$18.00\",\"pagamento\":\"Cartão\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$35\",\"telefone\":\"81985199653\",\"endereco\":\"Rua Doze\",\"status\":\"Solicitado\"}": "",
+      "id": 11
+    },
+    {
+      "{\"nome\":\"Teste1\",\"produto\":\"bolo pote ninho com nutella\\ncopo dois amores\",\"preco\":\"R$14.00\\nR$18.00\",\"pagamento\":\"Pix\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$36\",\"telefone\":\" 5581987718304\",\"endereco\":\"Rua 10\",\"status\":\"Solicitado\"}": "",
+      "id": 12
+    },
+    {
+      "{\"nome\":\"Teste1\",\"produto\":\"bolo pote ninho com nutella\\ncopo dois amores\",\"preco\":\"R$14.00\\nR$18.00\",\"pagamento\":\"Pix\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$36\",\"telefone\":\" 5581987718304\",\"endereco\":\"Rua 10\",\"status\":\"Solicitado\"}": "",
+      "id": 13
+    },
+    {
+      "{\"nome\":\"Teste1\",\"produto\":\"bolo pote ninho com nutella\\ncopo dois amores\",\"preco\":\"R$14.00\\nR$18.00\",\"pagamento\":\"Pix\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$36\",\"telefone\":\" 5581987718304\",\"endereco\":\"Rua 10\",\"status\":\"Solicitado\"}": "",
+      "id": 14
+    },
+    {
+      "{\"nome\":\"Teste1\",\"produto\":\"bolo pote ninho com nutella\\ncopo dois amores\",\"preco\":\"R$14.00\\nR$18.00\",\"pagamento\":\"Pix\",\"cidade\":\"Caetes III\",\"taxa\":\"R$4.00\",\"total\":\"R$36\",\"telefone\":\" 5581987718304\",\"endereco\":\"Rua 10\",\"status\":\"Solicitado\"}": "",
+      "id": 15
+    },
+    {
+      "nome": "Teste1",
+      "produto": "bolo pote ninho com nutella\ncopo dois amores",
+      "preco": "R$14.00\nR$18.00",
+      "pagamento": "Pix",
+      "cidade": "Caetes III",
+      "taxa": "R$4.00",
+      "total": "R$36",
+      "telefone": "+5581987718304",
+      "endereco": "Rua 10",
+      "id": 16
     }
   ]
 }

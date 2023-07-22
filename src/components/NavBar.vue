@@ -5,6 +5,8 @@
         </router-link>
         <router-link to="/">Home</router-link>
         <router-link to="/pedido">Pedidos</router-link>
+        <router-link to="/produto">Produtos</router-link>
+        <router-link to="/delivery">Entregas</router-link>
     </div>
 
 </template>
