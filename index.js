@@ -1,30 +1,28 @@
-const Conexao = require('./Venom')
-let client;
+//const Conexao = require('./Venom')
+const {io} = require('socket.io-client')
 
-async function iniciarConexao () {
-    try {
-        client = await Conexao.Connect()
+const socket = io();
 
-    } catch (error) {
-        console.log(error);
-    }
-}
-iniciarConexao()
+// Evento para notificar quando a conexão for estabelecida
+socket.on('connect', () => {
+  console.log('Conectado ao servidor:', socket.id);
 
-async function teste(mensagem) {
-    try {
-        if (!client) {
-            throw new Error('Conexão não foi iniciada. Chame a função iniciarConexao() primeiro.');
-        }
+  // Enviar uma mensagem para o servidor
+  socket.emit('mensagemCliente', 'Olá, servidor! Esta é uma mensagem do cliente.');
+  
+});
 
-        const groupId = '120363156215157686@g.us';
-        await client.sendText(groupId, mensagem);
 
-        console.log('Mensagem enviada com sucesso!');
-    } catch (error) {
-        console.log('Erro ao enviar mensagem:', error);
-    }
-}
 
-exports.teste = teste;
+// exports.enviarMensagem = async (mensagem) => {
+//     try {
+//         const client = await Conexao.Connect()
 
+//         const groupId = '120363156215157686@g.us'
+
+//         await client.sendText(groupId,mensagem);
+
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
