@@ -200,14 +200,7 @@ export default {
         this.msg = `Pedido realizado com sucesso`;
         setTimeout(() => (this.msg = ""), 3000);
 
-        this.nome = "";
-        this.produto = "";
-        this.forpagamento = "";
-        this.cidadebairro = "";
-        this.telefone = "";
-        this.endereco = "";
-        this.totalPed = "";
-        this.produtosSelecionados= []
+        location.reload()
 
       } else {
 

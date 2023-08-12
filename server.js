@@ -18,6 +18,10 @@ let client
   try {
     client = await venom.Connect()
     console.log('Cliente do Venom Bot conectado')
+
+    // client.onMessage((msg) => {
+    //   console.log(msg);
+    // })
   } catch (error) {
     console.log('Erro ao conectar o cliente', error)
   }
@@ -88,8 +92,8 @@ app.post('/mensagem', async (req,res) =>{
       dadosFormatadoEntrega += dadosEntrega[index] + '\n'
     }
 
-    await client.sendText('558185199653@c.us', dadosFormatadosPreparar)
-    await client.sendText('558185199653@c.us', dadosFormatadoEntrega)
+    await client.sendText('120363156215157686@g.us', dadosFormatadosPreparar)
+    await client.sendText('120363141230225936@g.us', dadosFormatadoEntrega)
     console.log("mensagem enviada com sucesso")
 
     res.send("Pedido enviado com sucesso")
