@@ -1,13 +1,18 @@
 <template >
-  <div class="Total-atualizado">
-    <p class="total-text">
-      R$
-      {{ totalPed }}
-    </p>
-  </div>
   <div id="topo">
     <Message :msg="msg" v-show="msg" />
     <div class="pai">
+      <div class="Total-atualizado">
+        <p v-if="!editar" class="total-text">
+          R$
+          {{ totalPed }}
+        </p>
+        <input v-else type="text" v-model="totalPed" class="total-input" />
+        <button v-if="buttonAlterar" @click="alterarTotal" id="button-alterar-total">
+          Alterar Total
+        </button>
+      </div>
+
       <form id="form-pedido">
         <div class="input-container">
           <label for="nome">Nome do Cliente:</label>
@@ -93,7 +98,7 @@
       </form>
       <div class="produtos-adicionado">
         <div v-for="produto in produtosSelecionados" :key="produto.id">
-        <p> {{produto}} </p>
+          <p>{{ produto }}</p>
         </div>
       </div>
     </div>
@@ -102,31 +107,40 @@
 
 <script>
 import Message from "./Message.vue";
-import axios from "axios"
+import axios from "axios";
 
 export default {
-
   name: "FormPedido",
   data() {
     return {
       produtos: null,
       formaDepagamento: null,
       entrega: null,
+      editar: false,
+      buttonAlterar: false,
 
       nome: null,
       produtosSelecionados: [],
       preco: [],
       forpagamento: null,
       cidadebairro: null,
-      telefone: null,
+      telefone: '',
       endereco: null,
       msg: null,
       totalPed: 0,
-      cidadeSelecionada: null,
+      cidadeSelecionada: '',
       arrayTotal: [],
     };
   },
   methods: {
+    alterarTotal() {
+      if (!this.editar) {
+        this.editar = !this.editar;
+      } else if (this.editar) {
+        this.totalPed = this.totalPed;
+        this.editar = !this.editar;
+      }
+    },
     async getProdutos() {
       const req = await fetch("http://localhost:3000/produtos");
       const data = await req.json();
@@ -150,7 +164,6 @@ export default {
       this.entrega = data;
     },
     async enviarPedido(e) {
-
       e.preventDefault();
 
       const precoCidadeBairro = parseFloat(
@@ -171,39 +184,40 @@ export default {
 
       const data = {
         nome: this.nome,
+        telefone: this.telefone,
         produto: produtosFormatados,
         preco: precosFormatados,
         pagamento: this.forpagamento,
         cidade: this.cidadebairro.Bairro,
-        taxa: this.cidadebairro.preço,
-        total: totalPedido,
-        telefone: this.telefone,
         endereco: this.endereco,
+        taxa: this.cidadebairro.preço,
+        total: this.totalPed,
       };
 
-      const dataJson = JSON.stringify(data);
-      console.log(dataJson)
+      const res = await axios.post("http://localhost:3001/mensagem", data)
 
-      axios.post('http://localhost:3000/pedido', dataJson)
+      if (res.data == "Pedido enviado com sucesso") {
+        this.msg = `Pedido realizado com sucesso`;
+        setTimeout(() => (this.msg = ""), 3000);
 
-      //const res = await req.json();
+        this.nome = "";
+        this.produto = "";
+        this.forpagamento = "";
+        this.cidadebairro = "";
+        this.telefone = "";
+        this.endereco = "";
+        this.totalPed = "";
+        this.produtosSelecionados= []
 
-      //this.msg = `Pedido N° ${res.id} realizado com sucesso`;
+      } else {
 
-      // setTimeout(() => (this.msg = ""), 3000);
-
-      // this.nome = "";
-      // this.produto = "";
-      // this.forpagamento = "";
-      // this.cidadebairro = "";
-      // this.telefone = "";
-      // this.endereco = "";
-      // this.totalPed = "";
-
-      // document.getElementById("topo").scrollIntoView({ behavior: "smooth" });
+        this.msg = `Erro ao enviar pedido`;
+        setTimeout(() => (this.msg = ""), 3000);
+      }
     },
     async adicionaProduto() {
       if (this.produto) {
+        this.buttonAlterar = true
         this.produtosSelecionados.push(this.produto.produto);
         this.preco.push(this.produto.preço);
 
@@ -212,9 +226,6 @@ export default {
           return total + numeroLimpo;
         }, 0);
 
-        this.msg = `Produto adicionado com sucesso!`;
-
-        setTimeout(() => (this.msg = ""), 1000);
         this.atualizarTotal();
       }
     },
@@ -246,6 +257,7 @@ export default {
 .pai {
   display: flex;
   flex-direction: column;
+  margin-top: -20px;
 }
 #form-pedido {
   display: flex;
@@ -277,13 +289,12 @@ select {
   background-color: #fac1d9;
   color: #8d6271;
   font-weight: bold;
-  border: 2px solid #fac1d9;
+  border-radius: 5px;
+  border: 1px solid #fac1d9;
   padding: 10px;
   font-size: 16px;
-  margin: 0 auto;
   cursor: pointer;
   transition: 0.5s;
-  margin-top: 19px;
 }
 .submit-btn:hover {
   background-color: transparent;
@@ -293,13 +304,14 @@ select {
   background-color: #fac1d9;
   color: #8d6271;
   font-weight: bold;
-  border: 2px solid #fac1d9;
-  padding: 10px;
   font-size: 16px;
-  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #fac1d9;
   cursor: pointer;
   transition: 0.5s;
-  margin-left: 30px;
+  float: right;
+  width: 30px;
+  margin-top: -30px;
 }
 #add-products:hover {
   background-color: transparent;
@@ -315,9 +327,8 @@ select {
 .Total-atualizado {
   width: 120px;
   height: 60px;
-  border: 1px solid black;
-
-  float: right;
+  align-content: center;
+  margin: 0 auto;
 }
 .total-text {
   display: flex;
@@ -333,5 +344,30 @@ select {
   border: 1px solid #8d6271;
   border-radius: 10px;
   align-items: center;
+}
+.total-input {
+  width: 80px;
+}
+#button-alterar-total {
+  margin-top: 7px;
+  width: 120px;
+  height: 23px;
+  background-color: #fac1d9;
+  border-radius: 5px;
+  border: 1px solid #fac1d9;
+  color: #8d6271;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.5s;
+}
+#button-alterar-total:hover {
+  background-color: transparent;
+  color: #222;
+}
+.total-input {
+  width: 120px;
+  height: 23px;
+  font-size: 14px;
 }
 </style>

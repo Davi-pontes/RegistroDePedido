@@ -1,0 +1,26 @@
+2023/08/11-18:19:47.042 4b58 Reusing MANIFEST C:\Users\DataSend 1\Documents\jhenifer_doce\RegistroDePedido\tokens\Jhenifer\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/11-18:19:47.042 4b58 Recovering log #636
+2023/08/11-18:19:47.074 4b58 Reusing old log C:\Users\DataSend 1\Documents\jhenifer_doce\RegistroDePedido\tokens\Jhenifer\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000636.log 
+2023/08/11-18:20:30.778 186c Level-0 table #648: started
+2023/08/11-18:20:30.799 186c Level-0 table #648: 1195126 bytes OK
+2023/08/11-18:20:30.800 186c Delete type=0 #636
+2023/08/11-18:20:31.107 4b58 Compacting 1@1 + 8@2 files
+2023/08/11-18:20:31.157 4b58 Generated table #649@1: 83782 keys, 2231401 bytes
+2023/08/11-18:20:31.210 4b58 Generated table #650@1: 35972 keys, 2217186 bytes
+2023/08/11-18:20:31.231 4b58 Generated table #651@1: 3234 keys, 2152619 bytes
+2023/08/11-18:20:31.249 4b58 Generated table #652@1: 2272 keys, 2142358 bytes
+2023/08/11-18:20:31.290 4b58 Generated table #653@1: 23587 keys, 2219069 bytes
+2023/08/11-18:20:31.337 4b58 Generated table #654@1: 25165 keys, 2202430 bytes
+2023/08/11-18:20:31.388 4b58 Generated table #655@1: 81029 keys, 2225989 bytes
+2023/08/11-18:20:31.430 4b58 Generated table #656@1: 69372 keys, 1527547 bytes
+2023/08/11-18:20:31.430 4b58 Compacted 1@1 + 8@2 files => 16918599 bytes
+2023/08/11-18:20:31.430 4b58 compacted to: files[ 0 0 8 0 0 0 0 ]
+2023/08/11-18:20:31.430 4b58 Delete type=2 #638
+2023/08/11-18:20:31.430 4b58 Delete type=2 #639
+2023/08/11-18:20:31.430 4b58 Delete type=2 #640
+2023/08/11-18:20:31.430 4b58 Delete type=2 #641
+2023/08/11-18:20:31.430 4b58 Delete type=2 #642
+2023/08/11-18:20:31.430 4b58 Delete type=2 #643
+2023/08/11-18:20:31.430 4b58 Delete type=2 #644
+2023/08/11-18:20:31.431 4b58 Delete type=2 #645
+2023/08/11-18:20:31.431 4b58 Delete type=2 #648

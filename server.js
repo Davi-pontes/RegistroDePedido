@@ -4,12 +4,24 @@ var XLSX = require('xlsx')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const Index = require('./index')
+const venom = require('./Venom.js')
 
 
 app.use(cors())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+let client
+
+(async () => {
+  try {
+    client = await venom.Connect()
+    console.log('Cliente do Venom Bot conectado')
+  } catch (error) {
+    console.log('Erro ao conectar o cliente', error)
+  }
+})()
 
 
 app.get('/produto', (req, res) => {
@@ -39,13 +51,48 @@ app.post('/produto', (req,res) =>{
 
 
 })
-app.post('/pedido', async(req,res) =>{
+
+app.post('/mensagem', async (req,res) =>{
   try {
-    console.log(req.body)
+    const dados = req.body
+    console.log(dados)
 
-      await Index.enviarMensagem(req.body)
+    const dadosPreparar = {
+      nome: dados.nome,
+      telefone: dados.telefone,
+      produto: dados.produto,
+      cidade:dados.cidade,
+      endereco:dados.endereco,
+      pagamento:dados.pagamento,
+      total:'R$'+dados.total
+    }
 
-      res.send('Mensagem enviada')
+    let dadosFormatadosPreparar = ''
+
+    for (const index in dadosPreparar){
+      dadosFormatadosPreparar += dadosPreparar[index] + '\n'
+    }
+
+    const dadosEntrega = {
+      nome: dados.nome,
+      telefone: dados.telefone,
+      cidade:dados.cidade,
+      endereco:dados.endereco,
+      pagamento:dados.pagamento,
+      total:'R$'+dados.total
+    }
+
+    let dadosFormatadoEntrega = ''
+
+    for(const index in dadosEntrega){
+      dadosFormatadoEntrega += dadosEntrega[index] + '\n'
+    }
+
+    await client.sendText('558185199653@c.us', dadosFormatadosPreparar)
+    await client.sendText('558185199653@c.us', dadosFormatadoEntrega)
+    console.log("mensagem enviada com sucesso")
+
+    res.send("Pedido enviado com sucesso")
       
   } catch (error) {
     console.log(error)
@@ -53,28 +100,6 @@ app.post('/pedido', async(req,res) =>{
   }
 
 })
-
-app.listen('3000', () => {
-  console.log('Servidor rodando na porta 3000')
+app.listen('3001', () => {
+  console.log('Servidor rodando na porta 3001')
 })
-
-
-
-// async function getProdutos() {
-  
-//     const req = await fetch('http://localhost:3000/produtos');
-//     const data = await req.json();
-//     let produtos = [];
-//     for (let i = 0; i < data.length; i++) {
-//       produtos.push(data[i].produto);
-//       produtos.push(data[i].preço);
-//     }
-  
-//     const produtosFormatados = produtos.join(', ');
-//     console.log(produtosFormatados);
-  
-//   }
-
-  
-
-// getProdutos()

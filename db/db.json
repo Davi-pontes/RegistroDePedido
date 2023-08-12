@@ -129,6 +129,11 @@
       "id": 25,
       "produto": "Pão pizza",
       "preço": "R$9.50"
+    },
+    {
+      "id": 26,
+      "produto": "Big copo Kit Kat",
+      "preço": "R$19.00"
     }
   ],
   "status": [

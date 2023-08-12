@@ -1,5 +1,4 @@
 <template>
-  
   <div class="main-container">
     <h1>Monte o pedido</h1>
     <FormPedido/>
@@ -12,8 +11,7 @@ import FormPedido from '../components/FormPedido.vue'
 export default{
   name:"Home",
   components:{
-    FormPedido
-    
+    FormPedido 
   }
 }
 </script>
