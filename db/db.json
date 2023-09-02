@@ -7,18 +7,18 @@
     },
     {
       "id": 2,
-      "produto": "big copo duplo ninho morango",
-      "preço": "R$19.00"
+      "produto": "Copo duplo ninho morango",
+      "preço": "R$15.00"
     },
     {
       "id": 3,
-      "produto": "big copo ninho + nutella",
+      "produto": "Big copo ninho + nutella",
       "preço": "R$19.00"
     },
     {
       "id": 4,
-      "produto": "big copo ferreiro",
-      "preço": "R$19.00"
+      "produto": "copo ferreiro",
+      "preço": "R$15.00"
     },
     {
       "id": 5,
@@ -33,7 +33,7 @@
     {
       "id": 7,
       "produto": "bolo pote red velvet ",
-      "preço": "R$13.00"
+      "preço": "R$14.00"
     },
     {
       "id": 8,
@@ -43,7 +43,7 @@
     {
       "id": 9,
       "produto": "copo dois amores",
-      "preço": "R$18.00"
+      "preço": "R$15.00"
     },
     {
       "id": 10,
@@ -63,11 +63,11 @@
     {
       "id": 13,
       "produto": "empadão",
-      "preço": "R$12.00"
+      "preço": "R$13.00"
     },
     {
       "id": 14,
-      "produto": "fatia brownie morango",
+      "produto": "fatia brownie chocolate belga e morango",
       "preço": "R$12.00"
     },
     {
@@ -108,11 +108,11 @@
     {
       "id": 22,
       "produto": "bolo pote prestigio",
-      "preço": "R$13.00"
+      "preço": "R$14.00"
     },
     {
       "id": 23,
-      "produto": "pudim",
+      "produto": "Pudim de leite",
       "preço": "R$8.50"
     },
     {
@@ -126,14 +126,45 @@
       "preço": "R$17.50"
     },
     {
-      "id": 25,
-      "produto": "Pão pizza",
-      "preço": "R$9.50"
+      "id": 26,
+      "produto": "Copo Kit Kat",
+      "preço": "R$15.00"
     },
     {
-      "id": 26,
-      "produto": "Big copo Kit Kat",
-      "preço": "R$19.00"
+      "id": 27,
+      "produto": "Copo bem casado",
+      "preço": "R$15.00"
+    }
+    ,
+    {
+      "id": 27,
+      "produto": "Bolo no pote de maracuja",
+      "preço": "R$14.00"
+    },
+    {
+      "id": 28,
+      "produto": "Duplo Kinder",
+      "preço": "R$15.00"
+    },
+    {
+      "id": 29,
+      "produto": "Bolo de pote crocante",
+      "preço": "R$14.00"
+    },
+    {
+      "id": 30,
+      "produto": "Fatia brownie bem casado",
+      "preço": "R$12.00"
+    },
+    {
+      "id": 31,
+      "produto": "Bolo de pote maracuja com chocolate",
+      "preço": "R$14.00"
+    },
+    {
+      "id": 32,
+      "produto": "Combo Coxinha",
+      "preço": "R$10.00"
     }
   ],
   "status": [
@@ -193,17 +224,17 @@
     {
       "id": 6,
       "Bairro": "Abreu centro",
-      "preço": "R$4.00"
+      "preço": "R$5.00"
     },
     {
       "id": 7,
       "Bairro": "Fosfato",
-      "preço": "R$5.00"
+      "preço": "R$6.00"
     },
     {
       "id": 8,
       "Bairro": "Cruz de Rebouças",
-      "preço": "R$6.00"
+      "preço": "R$8.00"
     },
     {
       "id": 9,
@@ -213,47 +244,52 @@
     {
       "id": 10,
       "Bairro": "Arthur Lundreg II",
-      "preço": "R$6.00"
+      "preço": "R$7.00"
     },
     {
       "id": 11,
       "Bairro": "Paratibe",
-      "preço": "R$6.00"
+      "preço": "R$7.00"
     },
     {
       "id": 12,
       "Bairro": "Matinha",
-      "preço": "R$5.00"
+      "preço": "R$6.00"
     },
     {
       "id": 13,
       "Bairro": "Paulista centro",
-      "preço": "R$8.00"
+      "preço": "R$9.00"
     },
     {
       "id": 14,
       "Bairro": "Arthur Lundreg I",
-      "preço": "R$8.00"
+      "preço": "R$9.00"
     },
     {
       "id": 15,
       "Bairro": "Maranguape",
-      "preço": "R$10.00"
+      "preço": "R$12.00"
     },
     {
       "id": 16,
       "Bairro": "Torres galvão",
-      "preço": "R$10.00"
+      "preço": "R$12.00"
     },
     {
       "id": 17,
       "Bairro": "Planalto",
-      "preço": "R$4.00"
+      "preço": "R$5.00"
     },
     {
       "id": 18,
       "Bairro": "Desterro",
-      "preço": "R$5.00"
+      "preço": "R$6.00"
+    },
+    {
+      "id": 19,
+      "Bairro": "Alto são miguel",
+      "preço": "R$6.00"
     }
   ],
   "pedido": [
