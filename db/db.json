@@ -58,7 +58,7 @@
     {
       "id": 12,
       "produto": "delicia de abacaxi ",
-      "preço": "R$12.00"
+      "preço": "R$10.00"
     },
     {
       "id": 13,
@@ -93,12 +93,12 @@
     {
       "id": 19,
       "produto": "torta de limao",
-      "preço": "R$12.00"
+      "preço": "R$10.00"
     },
     {
       "id": 20,
       "produto": "trufado de maracuja",
-      "preço": "R$12.00"
+      "preço": "R$10.00"
     },
     {
       "id": 21,
@@ -107,8 +107,8 @@
     },
     {
       "id": 22,
-      "produto": "bolo pote prestigio",
-      "preço": "R$14.00"
+      "produto": "Copo Duplo nutella",
+      "preço": "R$13.50"
     },
     {
       "id": 23,
@@ -123,7 +123,7 @@
     {
       "id": 25,
       "produto": "Torta holandesa",
-      "preço": "R$17.50"
+      "preço": "R$15.00"
     },
     {
       "id": 26,
@@ -138,8 +138,8 @@
     ,
     {
       "id": 27,
-      "produto": "Bolo no pote de maracuja",
-      "preço": "R$14.00"
+      "produto": "Torta mouse maracuja",
+      "preço": "R$15.00"
     },
     {
       "id": 28,
@@ -164,7 +164,47 @@
     {
       "id": 32,
       "produto": "Combo Coxinha",
-      "preço": "R$10.00"
+      "preço": "R$11.00"
+    },
+    {
+      "id": 33,
+      "produto": "Picole Maracuja",
+      "preço": "R$5.00"
+    },
+    {
+      "id": 34,
+      "produto": "Picole Morango",
+      "preço": "R$5.00"
+    },
+    {
+      "id": 35,
+      "produto": "Picole Ninho com Nutella",
+      "preço": "R$5.00"
+    },
+    {
+      "id": 36,
+      "produto": "Combo de empadão",
+      "preço": "R$16.00"
+    },
+    {
+      "id": 37,
+      "produto": "Bolo de pote bem casado",
+      "preço": "R$12.50"
+    },
+    {
+      "id": 38,
+      "produto": "Coca cola",
+      "preço": "R$3.50"
+    },
+    {
+      "id": 39,
+      "produto": "empadão de camarão",
+      "preço": "R$16.00"
+    },
+    {
+      "id": 40,
+      "produto": "Bolo vulcão de cenoura",
+      "preço": "R$32.00"
     }
   ],
   "status": [
@@ -290,6 +330,11 @@
       "id": 19,
       "Bairro": "Alto são miguel",
       "preço": "R$6.00"
+    },
+    {
+      "id": 20,
+      "Bairro": "Jardim Paulista Baixo",
+      "preço": "R$9.00"
     }
   ],
   "pedido": [

@@ -3,7 +3,7 @@ const pool = require('../connection');
 const allProducts = async () => {
     const connection = await pool.getConnection()
     try {
-        const [rows] = await connection.query('SELECT * FROM produtos')
+        const rows = await connection.query('SELECT * FROM produtos')
 
         connection.release()
         return rows
