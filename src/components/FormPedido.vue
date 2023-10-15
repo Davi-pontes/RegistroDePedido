@@ -8,7 +8,11 @@
           {{ totalPed }}
         </p>
         <input v-else type="text" v-model="totalPed" class="total-input" />
-        <button v-if="buttonAlterar" @click="alterarTotal" id="button-alterar-total">
+        <button
+          v-if="buttonAlterar"
+          @click="alterarTotal"
+          id="button-alterar-total"
+        >
           Alterar Total
         </button>
       </div>
@@ -26,16 +30,16 @@
         <div class="input-container">
           <label for="produto">Escolha o produto</label>
           <select name="produto" id="produto" v-model="produto">
-            <option value="">Selecione o produto</option>
+            <option disabled>Selecione o produto</option>
             <option
-              v-for="produto in produtos"
-              :key="produto.id"
+              v-for="(produto, index) in produtos"
+              :key="index"
               :value="produto"
             >
-              {{ produto.produto }}
+              {{ produto.Nome }}
             </option>
           </select>
-          <div id="input-container" @click.prevent="adicionaProduto">
+          <div id="input-container" @click.prevent="adicionarProduto">
             <button id="add-products">+</button>
           </div>
         </div>
@@ -43,13 +47,13 @@
         <div class="input-container">
           <label for="forpagamento">Forma de pagamento</label>
           <select name="forpagamento" id="forpagamento" v-model="forpagamento">
-            <option value="">Selecione a forma de pagamento</option>
+            <option disabled>Selecione a forma de pagamento</option>
             <option
               v-for="forma in formaDepagamento"
-              :key="forma.id"
-              :value="forma.forma"
+              :key="forma.id_pagamento"
+              :value="forma"
             >
-              {{ forma.forma }}
+              {{ forma.descricao }}
             </option>
           </select>
         </div>
@@ -59,11 +63,15 @@
             name="cidade-bairro"
             id="cidade-bairro"
             v-model="cidadebairro"
-            @change="adicionarTaxaAoTotal()"
+            @change="adicionarTaxalAoTotal()"
           >
-            <option>Cidade/Bairro</option>
-            <option v-for="cidade in entrega" :key="cidade.id" :value="cidade">
-              {{ cidade.Bairro }}
+            <option disabled>Cidade/Bairro</option>
+            <option
+              v-for="(cidade, index) in entrega"
+              :key="index"
+              :value="cidade"
+            >
+              {{ cidade.nome }}
             </option>
           </select>
         </div>
@@ -97,8 +105,20 @@
         </div>
       </form>
       <div class="produtos-adicionado">
-        <div v-for="produto in produtosSelecionados" :key="produto.id">
-          <p>{{ produto }}</p>
+        <div v-for="(produto, index) in produtosSelecionados" :key="index">
+          <ul>
+            {{
+              produto.Nome
+            }}
+            R${{
+              produto.preco
+            }}
+            <span
+              class="produto-x"
+              @click.prevent="removerProduto(index, produto.preco)"
+              >X</span
+            >
+          </ul>
         </div>
       </div>
     </div>
@@ -121,122 +141,80 @@ export default {
 
       nome: null,
       produtosSelecionados: [],
-      preco: [],
       forpagamento: null,
       cidadebairro: null,
-      telefone: '',
+      telefone: null,
       endereco: null,
       msg: null,
       totalPed: 0,
-      cidadeSelecionada: '',
-      arrayTotal: [],
+      cidadeSelecionada: "",
     };
   },
   methods: {
-    alterarTotal() {
-      if (!this.editar) {
-        this.editar = !this.editar;
-      } else if (this.editar) {
-        this.totalPed = this.totalPed;
-        this.editar = !this.editar;
-      }
-    },
     async getProdutos() {
-      const req = await fetch("http://localhost:3000/produtos");
+      const req = await fetch("http://localhost:3001/produto");
       const data = await req.json();
 
       this.produtos = data;
     },
-    async getStatus() {
-      const req = await fetch("http://localhost:3000/status");
-      const data = await req.json();
-    },
     async getFormaDePagamento() {
-      const req = await fetch("http://localhost:3000/FormaDePagamento");
+      const req = await fetch("http://localhost:3001/formapagamento");
       const data = await req.json();
 
       this.formaDepagamento = data;
     },
     async getEntrega() {
-      const req = await fetch("http://localhost:3000/entrega");
+      const req = await fetch("http://localhost:3001/cidadebairro");
       const data = await req.json();
 
       this.entrega = data;
     },
-    async enviarPedido(e) {
-      e.preventDefault();
+    adicionarProduto() {
+      if (this.produto) {
+        this.buttonAlterar = true;
+        this.produtosSelecionados.push(this.produto);
 
-      const precoCidadeBairro = parseFloat(
-        this.cidadebairro.preço.replace("R$", "")
-      );
-
-      const somaReduce = this.preco.reduce((total, numero) => {
-        const numeroLimpo = parseFloat(numero.replace("R$", ""));
-        return total + numeroLimpo;
-      }, 0);
-
-      const totalPedido = "R$" + (somaReduce + precoCidadeBairro);
-
-      const produtosFormatados = this.produtosSelecionados
-        .join("\n")
-        .replace(/"/g, "");
-      const precosFormatados = this.preco.join("\n").replace(/"/g, "");
-
-      const data = {
+        this.totalPed += parseFloat(this.produto.preco);
+      } else {
+        this.msg = "Adicione um produto";
+        setTimeout(() => (this.msg = null), 2000);
+      }
+    },
+    adicionarTaxalAoTotal() {
+      this.totalPed += parseFloat(this.cidadebairro.Taxa);
+      console.log(this.cidadebairro);
+    },
+    removerProduto(index, preco) {
+      this.produtosSelecionados.splice(index, 1);
+      this.totalPed -= preco;
+      if (this.produtosSelecionados.length == 0) {
+        this.buttonAlterar = false;
+      }
+    },
+    async enviarPedido() {
+      const dados = {
         nome: this.nome,
         telefone: this.telefone,
-        produto: produtosFormatados,
-        preco: precosFormatados,
-        pagamento: this.forpagamento,
-        cidade: this.cidadebairro.Bairro,
+        produtos: this.produtosSelecionados,
+        formaDepagamento: this.forpagamento,
+        cidadebairro: this.cidadebairro,
         endereco: this.endereco,
-        taxa: this.cidadebairro.preço,
         total: this.totalPed,
       };
+      await axios.post('http://localhost:3001/pedido', dados)
 
-      const res = await axios.post("http://localhost:3001/mensagem", data)
-
-      if (res.data == "Pedido enviado com sucesso") {
-        this.msg = `Pedido realizado com sucesso`;
-        setTimeout(() => (this.msg = ""), 3000);
-
-        location.reload()
-
-      } else {
-
-        this.msg = `Erro ao enviar pedido`;
-        setTimeout(() => (this.msg = ""), 3000);
-      }
-    },
-    async adicionaProduto() {
-      if (this.produto) {
-        this.buttonAlterar = true
-        this.produtosSelecionados.push(this.produto.produto);
-        this.preco.push(this.produto.preço);
-
-        this.totalPed = this.preco.reduce((total, numero) => {
-          const numeroLimpo = parseFloat(numero.replace("R$", ""));
-          return total + numeroLimpo;
-        }, 0);
-
-        this.atualizarTotal();
-      }
-    },
-    async atualizarTotal() {
-      let teste = parseFloat(this.produto.preço.replace("R$", ""));
-      this.arrayTotal.push(teste);
-      this.totalPed = this.arrayTotal.reduce((total, number) => {
-        return total + number;
-      }, 0);
-    },
-    async adicionarTaxaAoTotal() {
-      let tirarCifrao = parseFloat(this.cidadebairro.preço.replace("R$", ""));
-      this.totalPed = this.totalPed + tirarCifrao;
+      this.nome = null
+      this.telefone = null
+      this.produtosSelecionados = []
+      this.forpagamento = null
+      this.cidadebairro = null
+      this.endereco = null
+      this.totalPed = 0
+      this.produto = null
     },
   },
   mounted() {
     this.getProdutos();
-    this.getStatus();
     this.getFormaDePagamento();
     this.getEntrega();
   },
@@ -362,5 +340,14 @@ select {
   width: 120px;
   height: 23px;
   font-size: 14px;
+}
+.produto-x {
+  color: red;
+  cursor: pointer;
+}
+.produto-x:hover {
+  border-radius: 3px;
+  background-color: #8d6271;
+  transition: 0.2s;
 }
 </style>
